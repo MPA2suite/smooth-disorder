@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# Tell hatchling that the Python package lives inside src/
+packages = ["src/smooth_disorder"]
+
+[project]
+name = "smooth-disorder"
+version = "1.0.0"
+requires-python = ">=3.12"
+description = """
+Smooth Disorder is a general package that analyzes relation between local environments in a solid and its vibrational and thermal properties.
+"""
+readme = "README.md"
+authors = [
+    { name = "Kamil Iwanowski", email = "kamil.iwanowski@columbia.edu" },
+    { name = "Michele Simoncelli", email = "michele.simoncelli@columbia.edu" },
+]
+license-files = ["LICENSE"]
+keywords = ["materials science", "amorphous", "persistent homology", "entropy", "disorder", "thermal transport"]
+
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "ase>=3.23",
+    "h5py>=3.10",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "tqdm>=4.66",
+    "networkx>=3.2",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+# pip install "smooth-disorder[dl]" — adds disorder linewidth dependencies
+# Note: phonopy must be installed separately (see setup_dl.sh)
+dl = [
+    "torch>=2.0",
+]
+# pip install "smooth-disorder[jupyter]" — adds Jupyter for tutorial notebooks
+jupyter = [
+    "jupyter>=1.0",
+    "notebook>=7.0",
+]
+# pip install "smooth-disorder[dev]" — adds testing tools
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
+# pip install "smooth-disorder[docs]" — adds Sphinx documentation dependencies
+docs = [
+    "sphinx>=7.0",
+    "furo",
+    "myst-parser",
+    "nbsphinx",
+    "sphinx-copybutton",
+    "sphinxcontrib-bibtex",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests that run the full pipeline and take >10 s (deselect with -m 'not slow')",
+    "disorder_linewidth: marks tests that compare disorder linewidth workflow output files (skip with -m 'not disorder_linewidth')",
+    "bne_workflow: marks tests that compare bne_workflow output files against bne_test references (skip with -m 'not bne_workflow')",
+    "dl_workflow: marks tests that compare workflows/dl_workflow output files against workflows/dl_test references (skip with -m 'not dl_workflow')",
+]

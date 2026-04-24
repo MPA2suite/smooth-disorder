@@ -1,0 +1,62 @@
+# Virtual environment
+.venv_bne/
+.venv_dl/
+venv/
+env/
+phonopy_installation/
+phono3py_installation/
+
+# Claude Code internal files
+.claude/
+CLAUDE.md
+
+# Python build artefacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+
+# Sphinx build directory
+docs/_build
+
+# Sphinx build-time copies of tutorial scripts (generated from tutorials/diffusivity/)
+docs/tutorials/diffusivity_scripts/*.py
+
+# Sphinx build-time copies of workflow scripts (generated from workflows/)
+docs/workflows/*.py
+
+# Disorder linewidth output directories (large precomputed files, generated at runtime)
+tutorials/disorder_linewidth/dl_test/mesh_data.hdf5
+tutorials/disorder_linewidth/dl_tutorial/
+tutorials/disorder_linewidth/dl_workflow/
+
+# Workflow scripts and outputs (not for version control)
+workflows/bne_workflow/
+workflows/dl_workflow/
+
+# DL test workflow output
+workflows/dl_test/mesh_data.hdf5
+workflows/dl_test/*.png
+
+# Disordered system workflow (raw files)
+workflows/disordered_system/irg_t9_frequencies_raw.hdf5
+workflows/disordered_system/diffusivity_Allen_eta_conv.npz
+workflows/disordered_system/1_preprocess_files.ipynb
+
+# macOS metadata
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/

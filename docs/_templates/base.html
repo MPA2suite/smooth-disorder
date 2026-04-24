@@ -1,0 +1,11 @@
+{% extends "!base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<script>
+  // Default to light mode on first visit (before Furo reads localStorage)
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "light");
+  }
+</script>
+{% endblock %}

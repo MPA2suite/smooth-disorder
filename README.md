@@ -6,13 +6,7 @@ A Python library that introduces three complementary tools for connecting struct
 - computation of **Bond-Network Entropy (BNE)**, a descriptor of disorder for network solids,
 - fitting of **Disorder Linewidth (DL)**, a measure of scattering due to disorder that allows decomposition of diffusivity in disordered materials.
 
-**Allen-Feldman conductivity** is a standard expression for thermal conductivity and diffusivity for harmonic disordered solids based on atomic structure and interactions between atoms. The other tools in the library allow for more in-depth understanding of its predictions and how they depend on the degree of disorder.
-
-**Bond-Network Entropy** classifies local atomic environments using H1 persistent homology barcodes and summarises their distribution with a single Shannon entropy value. Higher BNE means greater heterogeneity — more disorder.
-
-**Disorder Linewidth** connects structural disorder to phonon linewidths and thermal transport. It models how disorder broadens the vibrational density of states (VDOS) via a Lorentzian spectral function ansatz, fits two physical parameters — grain-boundary size *L* and defect-scattering amplitude *R* — to the disordered VDOS using PyTorch autodiff (L-BFGS), and decomposes thermal diffusivity into propagation velocity and mean free path.
-
-> **Note:** We encourage users to first go through the tutorials that explain the theory behind the concepts and quantities calculated by this code. If you are interested only in executing the code, standalone workflow scripts are provided — use at your own risk.
+See the detailed documentation and tutorials at https://smooth-disorder.readthedocs.io
 
 **Paper:**
 K. Iwanowski, G. Csányi, and M. Simoncelli,
@@ -159,7 +153,7 @@ diffusivity and frequencies arrays feed directly into the disorder linewidth wor
 #### Required inputs
 
 - `POSCAR` — primitive cell of IRG T9 (216 atoms, included in the directory)
-- `fc2.hdf5` — second-order force constants (included in the directory)
+- `fc2.hdf5` — second-order force constants
 
 #### Setup
 

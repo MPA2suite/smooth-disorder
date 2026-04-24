@@ -41,6 +41,9 @@ tutorials/disorder_linewidth/dl_test/mesh_data.hdf5
 tutorials/disorder_linewidth/dl_tutorial/
 tutorials/disorder_linewidth/dl_workflow/
 
+# omit fc2.hdf5 as it is too large for github
+tutorials/diffusivity/fc2.hdf5
+
 # Workflow scripts and outputs (not for version control)
 workflows/bne_workflow/
 workflows/dl_workflow/

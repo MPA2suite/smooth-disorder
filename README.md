@@ -153,7 +153,8 @@ diffusivity and frequencies arrays feed directly into the disorder linewidth wor
 #### Required inputs
 
 - `POSCAR` — primitive cell of IRG T9 (216 atoms, included in the directory)
-- `fc2.hdf5` — second-order force constants
+- `fc2.hdf5` — second-order force constants (file is too large for GitHub; please download it from
+  [Google Drive](https://drive.google.com/drive/folders/16loux_gkvg3oDMCR8urRwfGbaMyPewpc?usp=sharing) and place in `tutorials/diffusivity/`)
 
 #### Setup
 
@@ -341,3 +342,4 @@ If you use this software, please cite:
 
 This software is distributed under the Academic Software Licence.
 See [LICENSE](LICENSE) for details.
+If you are interested in a commercial use of this software, please contact Michele Simoncelli (michele.simoncelli@gmail.com).

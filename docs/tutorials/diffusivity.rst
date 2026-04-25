@@ -46,6 +46,12 @@ and 4a file prepares the frequencies and diffusivity predictions for the disorde
 
 **Prerequisites:** phono3py environment, see `setup_phono3py.sh` and `tutorials/diffusivity/activate_phono3py.sh`.
 
+.. important::
+
+   ``fc2.hdf5`` (second-order force constants for IRG T9) is not included in the repository
+   because of its size. Download it from `Google Drive <https://drive.google.com/drive/folders/16loux_gkvg3oDMCR8urRwfGbaMyPewpc?usp=sharing>`_ and place it in
+   ``tutorials/diffusivity/`` before running any scripts.
+
 .. list-table::
    :header-rows: 1
    :widths: 5 55 40

@@ -3,6 +3,14 @@ Installation
 
 Two variants are available depending on which functionality you need.
 
+Download the repository from github:
+
+.. code-block:: bash
+
+   git clone https://github.com/MPA2suite/smooth-disorder.git
+   cd smooth-disorder
+
+
 Requirements
 ------------
 

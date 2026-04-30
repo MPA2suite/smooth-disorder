@@ -38,7 +38,7 @@ git clone https://github.com/phonopy/phono3py.git
 cd phono3py
 pip install -e . -v
 cd ..
-git clone https://github.com/atztogo/phono3py-wte.git
+git clone https://github.com/MSimoncelli/phono3py-wte.git
 
 
 cd phono3py-wte
